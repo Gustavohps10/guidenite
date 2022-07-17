@@ -22,7 +22,13 @@ export default function Guide(){
                     <Item text="Test" image={testImage}/>
                 </div>
             </div>
-            <footer></footer>
+            <footer>
+                <Item image={testImage}></Item>
+                <Item image={testImage}></Item>
+                <Item image={testImage}></Item>
+                <Item image={testImage}></Item>
+                <Item image={testImage}></Item>
+            </footer>
         </div>
     )
 }

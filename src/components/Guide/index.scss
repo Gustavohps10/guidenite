@@ -54,4 +54,21 @@
         overflow-y: auto;
         height: 300px;
     }
+
+    > header{
+        border-radius: 10px 10px 0 0;
+        background-color: #00000030; 
+        height: 60px;
+    }
+
+    footer{
+        width: 100%;
+        padding: 10px;
+        position: absolute;
+        bottom: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
