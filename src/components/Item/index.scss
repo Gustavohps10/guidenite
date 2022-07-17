@@ -1,0 +1,43 @@
+.item{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+
+    &:focus{
+        outline: 3px solid #2572c6;
+        outline-offset: 2px;
+        box-shadow: 0 0 6px 7px #0059b591;
+        background-color: rgba(#fff, 0.05);
+    }
+
+    > .image{
+        height: 55px;
+        width: 55px;
+        border-radius: 2px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    > .content{
+        padding: 5px;
+    }
+
+    &.small{
+        height: 30px;
+
+        > .image{
+            height: 30px;
+            width: 30px;
+        }
+    }
+}
