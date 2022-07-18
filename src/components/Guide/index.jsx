@@ -1,7 +1,6 @@
 import './index.scss'
 import Item from '../Item'
-import testImage from '../../assets/test-image.png'
-
+import testImage from '../../assets/images/test-image.png'
 import {SearchIcon, SettingsIcon, ShareIcon, Volume3Icon, MessageIcon, HomeIcon, LibraryIcon} from '@fluentui/react-icons-mdl2'
 
 export default function Guide(){

@@ -1,12 +1,14 @@
-import { useState } from 'react'
 import './App.css'
+import { AudioProvider } from './providers/audio'
 
 import Guide from './components/Guide'
 
 function App() {
 
   return (
-    <Guide/>
+    <AudioProvider>
+       <Guide/>
+    </AudioProvider>
   )
 }
 
