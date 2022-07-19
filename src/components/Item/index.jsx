@@ -11,7 +11,7 @@ export default function Item(props) {
     }
     
     return(
-        <div onFocus={playFocusSound} className={`item ${props.small == true ? "small": ""} ${!props.text && props.image ? "only-image" :""} ${props.filled ? "filled": ""}`} tabIndex="0">
+        <div onClick={props.onClick} onFocus={playFocusSound} className={`item ${props.small == true ? "small": ""} ${!props.text && props.image ? "only-image" :""} ${props.filled ? "filled": ""}`} tabIndex="0">
         
             {
                 props.image && (

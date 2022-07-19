@@ -1,13 +1,18 @@
 import './App.css'
 import { AudioProvider } from './providers/audio'
+import {Routes, Route} from 'react-router-dom'
 
-import Guide from './components/Guide'
+import Main from './pages/Main'
+import Sound from './pages/Sound'
 
 function App() {
 
   return (
     <AudioProvider>
-       <Guide/>
+      <Routes>
+        <Route path="/" element={<Main/>} />
+        <Route path="/sound" element={<Sound/>}/>
+      </Routes> 
     </AudioProvider>
   )
 }

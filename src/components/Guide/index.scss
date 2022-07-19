@@ -21,7 +21,6 @@
 
     > .content{
         padding: 10px;
-        padding-bottom: 30px;
     }
 
     .main-items{
@@ -70,5 +69,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    a{
+        color: #fff;
+        text-decoration: none;
     }
 }
