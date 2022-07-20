@@ -1,0 +1,43 @@
+.sounds{
+    padding: 10px;
+    margin: 10px -5px 0 -10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    height: 300px;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: transparent;
+        border-radius: 10px;
+    }
+      
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #3e3e3e;
+        border: 3px solid transparent;
+        background-clip: content-box;
+    }
+
+    
+
+    .item{
+        .image img{
+            width: 32px;
+            height: 32px;
+        }
+        
+        .content{
+            padding-top: 2px;
+        }
+    }
+
+    .slider-box{
+        width: 240px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: #838383;
+    }
+}

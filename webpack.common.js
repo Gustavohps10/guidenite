@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: 'development',
@@ -40,7 +41,7 @@ module.exports = {
           {
             loader: 'native-addon-loader',
             options: {
-              name: '[name]-[hash].[ext]', // default: '[name].[ext]'
+              name: './addon/[name]-[hash].[ext]', // default: '[name].[ext]'
               from: '.' // default: '.'
             }
           }
@@ -52,7 +53,13 @@ module.exports = {
       }
     ]
   },
-  
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        { from: "build/js/addon", to: "../../addon" }
+      ],
+    }),
+  ],
   resolve: {
     extensions: ['.js', '.jsx'],
   },

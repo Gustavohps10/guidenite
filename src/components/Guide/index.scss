@@ -75,4 +75,15 @@
         color: #fff;
         text-decoration: none;
     }
+
+    h1{
+        font-weight: 400;
+        margin-bottom: 10px;
+        margin-top: 15px;
+        padding-left: 10px;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 }

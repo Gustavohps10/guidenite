@@ -29,6 +29,7 @@ export default function Item(props) {
                 props.text && (
                     <div className="content">
                         <span>{props.text}</span>
+                        {props.children}
                     </div>
                 )
             }
