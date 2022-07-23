@@ -38,6 +38,10 @@
         display: flex;
         align-items: center;
         gap: 15px;
-        color: #838383;
+        
+        .main-value{
+            color: #838383;
+            width: 26px;
+        }
     }
 }

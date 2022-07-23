@@ -1,15 +1,15 @@
-import React, {useEffect} from 'react'
+import React, {memo, useEffect} from 'react'
 import './index.scss'
 import { AudioContext } from '../../providers/audio'
 
-export default function Item(props) {
+function Item(props) {
     const {audios} = React.useContext(AudioContext)
-    
+    console.log("comum item")
     function playFocusSound() {
         audios.focusAudio.currentTime = 0
         audios.focusAudio.play()
     }
-    
+
     return(
         <div onClick={props.onClick} onFocus={playFocusSound} className={`item ${props.small == true ? "small": ""} ${!props.text && props.image ? "only-image" :""} ${props.filled ? "filled": ""}`} tabIndex="0">
         
@@ -37,3 +37,10 @@ export default function Item(props) {
         </div>
     )
 }
+
+
+export default memo(Item, (prev, next)=>{
+    if(!prev.children){
+        return prev.text == next.text
+    }
+})
