@@ -1,0 +1,32 @@
+.modal{
+
+    .loading{
+        padding-top: 10px;
+        text-align: center;
+
+        img{
+            width: 100px;
+        }
+    }
+
+    .screenshot-options{
+        h1{
+            text-align: center;
+            font-weight: 400;
+        }
+
+        img{
+            margin-top: 10px;
+            width: 100%;
+            border-radius: 2px;
+        }
+
+        .items{
+            padding: 10px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+    
+}

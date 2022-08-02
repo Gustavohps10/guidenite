@@ -1,6 +1,6 @@
 import Guide from '../components/Guide'
 import Item from '../components/Item'
-import {SearchIcon, SettingsIcon, ShareIcon, Volume3Icon, MessageIcon, HomeIcon, LibraryIcon} from '@fluentui/react-icons-mdl2'
+import {SearchIcon, SettingsIcon, RingerIcon, Volume3Icon, HomeIcon, LibraryIcon, Photo2Icon} from '@fluentui/react-icons-mdl2'
 import testImage from '../assets/images/test-image.png'
 import { Link } from "react-router-dom"
 
@@ -21,8 +21,8 @@ export default function Main() {
                 </div>
             </div>
             <footer>
-                <Item filled image={<MessageIcon />}/>
-                <Item filled image={<ShareIcon/>}/>
+                <Item filled image={<RingerIcon />}/>
+                <Link tabIndex="-1" to="/gallery"><Item filled image={<Photo2Icon/>}/></Link>
                 <Item filled image={<SearchIcon />}/>
                 <Link tabIndex="-1" to="/sound"><Item filled image={<Volume3Icon/>}/></Link>
                 <Item filled image={<SettingsIcon/>}/> 

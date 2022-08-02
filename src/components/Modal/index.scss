@@ -1,0 +1,20 @@
+.modal{
+    width: 525px;
+    height: 636px;
+    background-color: #1f1f1f;
+    box-shadow: 0px 0px 20px 0px rgba(#000, 44%);
+    position: fixed;
+    bottom: 30px;
+    left: 375px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+
+    &.visible{
+        display: block;
+    }
+
+    &.hide{
+        display: none;
+    }
+}

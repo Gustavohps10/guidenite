@@ -1,0 +1,33 @@
+.input-text{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    padding: 0 15px;
+    background-color: #080808;
+
+    &:focus, &.active{
+        outline: 3px solid #2572c6;
+        outline-offset: 2px;
+        box-shadow: 0 0 6px 7px #0059b591;
+    }
+
+    input{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 21px;
+        font-weight: 400;
+        width: 100%;
+    }
+
+    .icon{
+        margin-right: 20px;
+        span{
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
