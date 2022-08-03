@@ -25,6 +25,11 @@
             object-fit: cover;
             width: 100%;
             height: 100%;
+
+            &.icon{
+                width: 32px;
+                height: 32px;
+            }
         }
 
         span{
@@ -35,6 +40,8 @@
 
     > .content{
         padding: 5px;
+        max-width: 235px;
+        text-overflow: ellipsis
     }
 
     &.filled{

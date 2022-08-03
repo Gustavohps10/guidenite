@@ -14,7 +14,11 @@ function Item(props) {
         <div 
         onClick={props.onClick} 
         onFocus={()=> playFocusSound()} 
-        className={`item ${props.small == true ? "small": ""} ${!props.text && props.image ? "only-image" :""} ${props.filled ? "filled": ""}`} 
+        className={`item 
+            ${props.small == true ? "small": ''} 
+            ${!props.text && props.image ? "only-image" :''} 
+            ${props.filled ? "filled": ''}
+        `} 
         tabIndex="0"
         style={props.style}
         >
@@ -25,7 +29,7 @@ function Item(props) {
                     {
                         React.isValidElement(props.image) 
                         ? props.image 
-                        : <img src={props.image} alt={props.text} />
+                        : <img className={`${props.imageIsIcon ? "icon": ''}`} src={props.image} alt={props.text} />
                     }
                 </div>
                 )
