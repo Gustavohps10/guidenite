@@ -1,6 +1,6 @@
 import Guide from '../components/Guide'
 import Item from '../components/Item'
-import {SearchIcon, SettingsIcon, RingerIcon, Volume3Icon, HomeIcon, LibraryIcon, Photo2Icon, CancelIcon} from '@fluentui/react-icons-mdl2'
+import {SearchIcon, SettingsIcon, RingerIcon, Volume3Icon, HomeIcon, LibraryIcon, Photo2Icon, CancelIcon, PowerButtonIcon} from '@fluentui/react-icons-mdl2'
 import loadingGif from '../assets/images/loading.gif'
 import { Link } from "react-router-dom"
 import React, { useState } from 'react'
@@ -96,7 +96,7 @@ export default function Main() {
                 </div>
             </div>
             <footer>
-                <Item filled image={<RingerIcon />}/>
+                <Link tabIndex="-1" to="/shutdown"><Item filled image={<PowerButtonIcon />}/></Link>
                 <Link tabIndex="-1" to="/gallery"><Item filled image={<Photo2Icon/>}/></Link>
                 <Item filled image={<SearchIcon />}/>
                 <Link tabIndex="-1" to="/sound"><Item filled image={<Volume3Icon/>}/></Link>
