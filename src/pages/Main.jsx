@@ -1,16 +1,35 @@
 import Guide from '../components/Guide'
 import Item from '../components/Item'
-import {SearchIcon, SettingsIcon, RingerIcon, Volume3Icon, HomeIcon, LibraryIcon, Photo2Icon} from '@fluentui/react-icons-mdl2'
+import {SearchIcon, SettingsIcon, RingerIcon, Volume3Icon, HomeIcon, LibraryIcon, Photo2Icon, CancelIcon} from '@fluentui/react-icons-mdl2'
 import loadingGif from '../assets/images/loading.gif'
 import { Link } from "react-router-dom"
-import React from 'react'
+import React, { useState } from 'react'
 import { WindowContext } from '../providers/window'
+import fkill from "fkill"
 
 export default function Main() {
     const windows = React.useContext(WindowContext);
+    const [selectedWindow, setSelectedWindow] = useState(null)
+
+    const ignoredWindows = [
+        "Guidenite",
+        "Microsoft Text Input Application",
+        "explorer",
+        "Taskmgr"
+    ]
 
     function limitTextSize(text, count){
         return text.slice(0, count) + (text.length > count ? "..." : "");
+    }
+
+    function handleSelectedWindow(window) {
+        setSelectedWindow(window)
+    }
+
+    function stopWindow() {
+        fkill(selectedWindow.id, {
+            force: true
+        })
     }
 
     return (
@@ -35,12 +54,40 @@ export default function Main() {
 
                     { windows.length > 0 &&
                         windows.map(window =>{
-                            if(window.title != "Guidenite" && window.title != "Microsoft Text Input Application"){
-                                return <Item 
-                                    key={window.id}  
-                                    imageIsIcon image={window.icon} 
-                                    text={limitTextSize(window.title, 50)}
-                                />
+                            if(
+                                !ignoredWindows.includes(window.title)
+                                && !ignoredWindows.includes(window.description)
+                                && !ignoredWindows.includes(window.name)
+                            ){
+                                return (
+                                    <Item 
+                                        key={window.id}  
+                                        imageIsIcon image={window.icon} 
+                                        text={limitTextSize(window.title, 50)}
+                                        onClick={(e)=>handleSelectedWindow(window, e)}
+                                    >
+                                        {
+                                            selectedWindow && selectedWindow.id == window.id && 
+                                            <>
+                                                <hr />
+                                                <div 
+                                                    className="options"
+                                                    style={{
+                                                        padding: "10px 0",
+                                                        color: "#9e9e9e"
+                                                    }}
+                                                >
+                                                    <Item small image={<CancelIcon/>} text="Fechar" onClick={stopWindow}/>
+                                                </div>
+                                            </>
+                                            
+
+                                        }
+                                        
+                                    </Item>
+                
+                                )
+                                
                             }
                             
                         })
@@ -55,6 +102,7 @@ export default function Main() {
                 <Link tabIndex="-1" to="/sound"><Item filled image={<Volume3Icon/>}/></Link>
                 <Item filled image={<SettingsIcon/>}/> 
             </footer>   
-        </Guide>
+        </Guide>   
+    
     )
 }

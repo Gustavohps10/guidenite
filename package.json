@@ -17,6 +17,7 @@
     "@mui/material": "^5.9.1",
     "extract-file-icon": "^0.3.2",
     "find-process": "^1.4.7",
+    "fkill": "^8.0.1",
     "iconv-lite": "^0.6.3",
     "jimp": "^0.16.1",
     "node-audio-volume-mixer": "^1.0.3",

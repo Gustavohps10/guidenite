@@ -38,7 +38,7 @@ function Item(props) {
             {
                 props.text && (
                     <div className="content">
-                        <span>{props.text}</span>
+                        <span className="text">{props.text}</span>
                         {props.children}
                     </div>
                 )
