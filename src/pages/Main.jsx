@@ -36,7 +36,7 @@ export default function Main() {
         <Guide>
             <div className="content">
                 <div className="main-items">
-                    <Item image={<HomeIcon/>} text="Home" />
+                    <Item image={<HomeIcon/>} text="Home" autoFocus />
                     <Item image={<LibraryIcon/>} text="Biblioteca" />
                 </div>
                 <hr />

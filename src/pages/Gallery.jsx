@@ -59,7 +59,7 @@ export default function Gallery() {
                 <div className="content">
                     <h1><Photo2Icon/> <span>Galeria</span> </h1>
                     <div className="main-items">
-                        <Link tabIndex="-1" to="/"><Item text="Voltar" image={<BackIcon/>}/></Link>
+                        <Link tabIndex="-1" to="/"><Item text="Voltar" image={<BackIcon/>} autoFocus/></Link>
                         <Item 
                             image={ <DesktopScreenshotIcon/>} 
                             text="Capturar tela"

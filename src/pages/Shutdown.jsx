@@ -13,7 +13,7 @@ export default function Shutdown() {
             <div className="content">
                     <h1><PowerButtonIcon/> <span>Opções de desligamento</span> </h1>
                     <div className="main-items">
-                        <Link tabIndex="-1" to="/"><Item text="Voltar" image={<BackIcon/>}/></Link>
+                        <Link tabIndex="-1" to="/"><Item text="Voltar" image={<BackIcon/>} autoFocus/></Link>
                     </div>
                     <hr />
                     <div className="main-items">

@@ -1,17 +1,27 @@
-import React, {memo, useEffect} from 'react'
+import React, {memo, useRef, useEffect} from 'react'
 import './index.scss'
 import { AudioContext } from '../../providers/audio'
 
 function Item(props) {
     const {audios} = React.useContext(AudioContext)
+    const itemRef = useRef(null)
     
     function playFocusSound() {
-        audios.focusAudio.currentTime = 0
+        if(!props.autoFocus){
+            audios.focusAudio.currentTime = 0
+        }
         audios.focusAudio.play()
     }
 
+    useEffect(()=>{
+        if(props.autoFocus){
+            itemRef.current.focus()
+        }
+    }, [])
+
     return(
         <div 
+        ref={itemRef}
         onClick={props.onClick} 
         onFocus={()=> playFocusSound()} 
         className={`item 

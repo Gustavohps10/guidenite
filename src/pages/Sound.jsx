@@ -72,7 +72,7 @@ export default function Sound(){
             {<div className="content">
                 <h1><Volume3Icon/> <span>Controle de Som</span> </h1>
                 <div className="main-items">
-                    <Link tabIndex="-1" to="/"><Item text="Voltar" image={<BackIcon/>}/></Link>
+                    <Link tabIndex="-1" to="/"><Item text="Voltar" image={<BackIcon/>} autoFocus/></Link>
                 </div>
                 <hr />
                 <h1>Mixer</h1>

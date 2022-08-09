@@ -58,7 +58,7 @@ export default function Screenshots() {
             <div className="content">
                 <h1><PhotoCollectionIcon/> <span>Minhas capturas</span> </h1>
                 <div className="main-items">
-                    <Link tabIndex="-1" to="/gallery"><Item text="Voltar" image={<BackIcon/>}/></Link>
+                    <Link tabIndex="-1" to="/gallery"><Item text="Voltar" image={<BackIcon/>} autoFocus/></Link>
                 </div>
                 <hr />
                 <div className="main-items">
