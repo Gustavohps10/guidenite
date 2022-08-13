@@ -4,6 +4,10 @@
     display: flex;
     border-radius: 2px;
 
+    &.pressed:focus{
+        background-color: rgba(#000, 0.5);
+    }
+
     &:focus{
         outline: 3px solid #2572c6;
         outline-offset: 2px;
@@ -47,6 +51,7 @@
             min-height: 42px;
             display: flex;
             align-items: center;
+            overflow: hidden;
         }
     }
 

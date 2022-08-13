@@ -3,7 +3,8 @@ import React from "react";
 export const AudioContext = React.createContext({})
 
 const audios = {
-    focusAudio : new Audio('src/assets/sounds/focus_sound.wav')
+    focusAudio : new Audio('src/assets/sounds/focus_sound.wav'),
+    clickAudio : new Audio('src/assets/sounds/click_sound.wav')
 }
 
 export const AudioProvider = (props) => {

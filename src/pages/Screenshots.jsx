@@ -71,7 +71,7 @@ export default function Screenshots() {
                 </div>
                 
                 {screenshots.length > 0 && 
-                    <div className="screenshots-container">
+                    <div className="screenshots-container grid">
                         {
                             screenshots.map(image =>{
                                 return(

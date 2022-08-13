@@ -14,6 +14,9 @@ export default function InputText(props) {
 
     function handleFocus() {
         playFocusSound()
+    }
+
+    function handleClick() {
         inputRef.current.focus()
         setActive(true)
     }
@@ -22,7 +25,8 @@ export default function InputText(props) {
         <div 
             className={`input-text ${active?"active": ''}`} 
             tabIndex="0"
-            onFocus={()=>handleFocus()}
+            onFocus={handleFocus}
+            onClick={handleClick}
         >
             {props.icon &&
                 <div className="icon">

@@ -13,16 +13,28 @@ function Item(props) {
         audios.focusAudio.play()
     }
 
+    function playClickSound() {
+        audios.clickAudio.currentTime = 0
+        audios.clickAudio.play()
+    }
+
     useEffect(()=>{
         if(props.autoFocus){
             itemRef.current.focus()
         }
     }, [])
 
+    function handleClick(){
+        playClickSound()
+        if(props.onClick){
+            props.onClick()
+        }
+    }
+
     return(
         <div 
         ref={itemRef}
-        onClick={props.onClick} 
+        onClick={handleClick} 
         onFocus={()=> playFocusSound()} 
         className={`item 
             ${props.small == true ? "small": ''} 

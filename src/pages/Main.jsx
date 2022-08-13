@@ -95,13 +95,13 @@ export default function Main() {
                     
                 </div>
             </div>
-            <footer>
+            <footer className="horizontal">
                 <Link tabIndex="-1" to="/shutdown"><Item filled image={<PowerButtonIcon />}/></Link>
                 <Link tabIndex="-1" to="/gallery"><Item filled image={<Photo2Icon/>}/></Link>
                 <Item filled image={<SearchIcon />}/>
                 <Link tabIndex="-1" to="/sound"><Item filled image={<Volume3Icon/>}/></Link>
                 <Item filled image={<SettingsIcon/>}/> 
-            </footer>   
+            </footer>
         </Guide>   
     
     )
