@@ -17,7 +17,8 @@ const createWindow = () => {
         transparent: true,
         frame: false,
         resizable: false,
-        alwaysOnTop: true
+        alwaysOnTop: true,
+        icon: __dirname + "\\src\\assets\\icons\\guidenite.png"
     })
 
     win.setAlwaysOnTop(true, 'screen');
