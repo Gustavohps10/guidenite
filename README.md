@@ -15,7 +15,7 @@
 
 # :page_with_curl: Description
 <p>
-Guidenite is basically a menu that appears on top of other apps. I recently started using the <a target="_blank" href="https://playnite.link/">Playnite<a> app, I decided to make my computer interface as similar to a video game interface as possible, so I came up with the idea of creating my own menu where I can control it with a gamepad.
+Guidenite is basically a menu that appears on top of other apps. I recently started using the <a target="_blank" href="https://playnite.link/">Playnite</a> app, I decided to make my computer interface as similar to a video game interface as possible, so I came up with the idea of creating my own menu where I can control it with a gamepad.
 </p>
 
 # :game_die: Features
