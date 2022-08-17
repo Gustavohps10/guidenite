@@ -10,12 +10,12 @@
 > Status: **Developing** ⚠️
 
 <div align="center">
-<img src="views/assets/images/to-readme/buying.gif" />
+<img src="src/assets/images/example.gif" />
 </div>
 
 # :page_with_curl: Description
 <p>
-Guidenite
+Guidenite is basically a menu that appears on top of other apps. I recently started using the Playnite app, I decided to make my computer interface as similar to a video game interface as possible, so I came up with the idea of ​​creating my own menu where I can control it with a gamepad.
 </p>
 
 # :game_die: Features
